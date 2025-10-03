@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todd Patalano - State Senate District 26</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            font-size: 14px;
+            color: #4a7ba7;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        .donate-btn {
+            background: #4a7ba7;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .donate-btn:hover {
+            background: #3a6b97;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                        url('assets/images/state-house.jpg') center/cover no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: calc(100vh - 70px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            opacity: 0;
+            animation: fadeIn 2.5s ease-in-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 7rem;
+            color: #4a7ba7;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #4a7ba7;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .support-btn {
+            background: #4a7ba7;
+            color: white;
+            padding: 15px 50px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+            animation: fadeInUp 1.2s ease-in-out 1s both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .support-btn:hover {
+            background: #3a6b97;
+            transform: translateY(-2px);
+        }
+
+        .page-break {
+            width: 100%;
+            padding: 60px 0;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-break-line {
+            width: 80%;
+            max-width: 600px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #4a7ba7, transparent);
+            position: relative;
+        }
+
+        .page-break-line::before {
+            content: '★';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: #4a7ba7;
+            padding: 0 20px;
+            font-size: 1.2rem;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            background: #e8e9ea;
+        }
+
+        .about-image {
+            background: url('assets/images/todd-family.webp') center/cover no-repeat;
+        }
+
+        .about-content {
+            padding: 60px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-content h3 {
+            color: #4a7ba7;
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .vision-section {
+            background: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px 80px 20px;
+            text-align: center;
+        }
+
+        .vision-section h2 {
+            color: #4a7ba7;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        .vision-content {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            flex: 1;
+        }
+
+        .vision-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .vision-image {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: url('assets/images/todd.webp') center/cover no-repeat;
+            margin-bottom: 30px;
+        }
+
+        .join-btn {
+            background: #4a7ba7;
+            color: white;
+            padding: 15px 60px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .join-btn:hover {
+            background: #3a6b97;
+        }
+
+        .accordion {
+            text-align: left;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #d0d0d0;
+        }
+
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .accordion-header:hover {
+            color: #4a7ba7;
+        }
+
+        .accordion-title {
+            color: #4a7ba7;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .accordion-icon {
+            color: #4a7ba7;
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 200px;
+            padding-bottom: 25px;
+        }
+
+        .accordion-content p {
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .slideshow-section {
+            position: relative;
+            width: 100%;
+            height: 1400px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide-1 { background-image: url('assets/images/slide-1.jpeg'); }
+        .slide-2 { background-image: url('assets/images/slide-2.webp'); }
+        .slide-3 { background-image: url('assets/images/slide-3.jpeg'); }
+        .slide-4 { background-image: url('assets/images/slide-4.webp'); }
+        .slide-5 { background-image: url('assets/images/slide-5.webp'); }
+
+        .invest-section {
+            background: #e8e9ea;
+            padding: 60px 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .invest-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .invest-content h2 {
+            color: #4a7ba7;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .invest-content p {
+            color: #333;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .invest-content .donate-btn {
+            display: inline-block;
+        }
+
+        .invest-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .invest-logo img {
+            max-width: 60%;
+            height: auto;
+        }
+
+        .volunteer-section {
+            background: #f5f6f7;
+            padding: 120px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .volunteer-section h2 {
+            color: #4a7ba7;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        .volunteer-form-container {
+            background: #a8b8c8;
+            border-radius: 20px;
+            padding: 60px;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .volunteer-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .form-group label {
+            color: #2d3e50;
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            background: white;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .form-group input:focus {
+            box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.3);
+        }
+
+        .sign-up-btn {
+            background: #4a7ba7;
+            color: white;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .sign-up-btn:hover {
+            background: #3a6b97;
+        }
+
+        footer {
+            background: #e8e9ea;
+            padding: 60px 20px;
+            position: relative;
+            border: 2px solid #c8c9ca;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .footer-left h3 {
+            color: #2d3e50;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .footer-right h3 {
+            color: #2d3e50;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footer-right p {
+            color: #2d3e50;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8;
+            margin: 5px 0;
+        }
+
+        .footer-right a {
+            color: #2d3e50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-right a:hover {
+            color: #4a7ba7;
+        }
+
+        /* Tablet and smaller desktop */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 4.5rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .vision-image {
+                width: 400px;
+                height: 400px;
+            }
+
+            .about-content {
+                padding: 50px 40px;
+            }
+        }
+
+        /* Mobile landscape and small tablets */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+
+            header .donate-btn {
+                display: none;
+            }
+
+            .hero {
+                min-height: 100vh;
+                padding: 30px 15px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 15px;
+            }
+
+            .hero h2 {
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .support-btn {
+                padding: 12px 40px;
+                font-size: 15px;
+            }
+
+            .page-break {
+                padding: 40px 0;
+            }
+
+            .page-break-line {
+                width: 85%;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .about-image {
+                min-height: 350px;
+                order: 1;
+            }
+
+            .about-content {
+                padding: 40px 25px;
+                order: 2;
+            }
+
+            .about-content h3 {
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+
+            .about-content p {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 30px;
+            }
+
+            .vision-section {
+                padding: 50px 20px 60px;
+                min-height: auto;
+            }
+
+            .vision-section h2 {
+                font-size: 2rem;
+                margin-bottom: 40px;
+                letter-spacing: 2px;
+            }
+
+            .vision-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .vision-image {
+                width: 280px;
+                height: 280px;
+            }
+
+            .join-btn {
+                padding: 12px 50px;
+                font-size: 15px;
+            }
+
+            .accordion-title {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+
+            .accordion-header {
+                padding: 20px 0;
+            }
+
+            .accordion-content.active {
+                max-height: 300px;
+                padding-bottom: 20px;
+            }
+
+            .accordion-content p {
+                font-size: 0.9rem;
+            }
+
+            .slideshow-section {
+                height: 500px;
+            }
+
+            .invest-section {
+                grid-template-columns: 1fr;
+                padding: 50px 25px;
+                gap: 40px;
+            }
+
+            .invest-content h2 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+
+            .invest-content p {
+                font-size: 1.1rem;
+            }
+
+            .invest-logo img {
+                max-width: 70%;
+            }
+
+            .volunteer-section {
+                padding: 80px 20px;
+            }
+
+            .volunteer-section h2 {
+                font-size: 2rem;
+                margin-bottom: 40px;
+                letter-spacing: 2px;
+            }
+
+            .volunteer-form-container {
+                padding: 40px 30px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .footer-left h3,
+            .footer-right h3,
+            .footer-right p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Mobile portrait */
+        @media (max-width: 480px) {
+            header {
+                padding: 15px 15px;
+                justify-content: center;
+            }
+
+            .logo {
+                font-size: 10px;
+            }
+
+            .hero {
+                min-height: 100vh;
+                padding: 20px 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                letter-spacing: 1px;
+                margin-bottom: 12px;
+            }
+
+            .hero h2 {
+                font-size: 1.1rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 25px;
+            }
+
+            .support-btn {
+                padding: 12px 35px;
+                font-size: 14px;
+            }
+
+            .page-break {
+                padding: 30px 0;
+            }
+
+            .page-break-line {
+                width: 90%;
+            }
+
+            .page-break-line::before {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+
+            .about-image {
+                min-height: 300px;
+            }
+
+            .about-content {
+                padding: 35px 20px;
+            }
+
+            .about-content h3 {
+                font-size: 1.2rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 15px;
+            }
+
+            .about-content p {
+                font-size: 0.95rem;
+                line-height: 1.65;
+                margin-bottom: 25px;
+            }
+
+            .vision-section {
+                padding: 40px 15px 50px;
+            }
+
+            .vision-section h2 {
+                font-size: 1.6rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 35px;
+            }
+
+            .vision-content {
+                gap: 35px;
+            }
+
+            .vision-image {
+                width: 240px;
+                height: 240px;
+                margin-bottom: 25px;
+            }
+
+            .join-btn {
+                padding: 12px 40px;
+                font-size: 14px;
+            }
+
+            .accordion-title {
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
+
+            .accordion-header {
+                padding: 18px 0;
+            }
+
+            .accordion-icon {
+                font-size: 1.3rem;
+            }
+
+            .accordion-content.active {
+                max-height: 350px;
+            }
+
+            .accordion-content p {
+                font-size: 0.88rem;
+                line-height: 1.5;
+            }
+
+            .slideshow-section {
+                height: 350px;
+            }
+
+            .invest-section {
+                padding: 40px 20px;
+                gap: 30px;
+            }
+
+            .invest-content h2 {
+                font-size: 1.6rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 20px;
+            }
+
+            .invest-content p {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 30px;
+            }
+
+            .invest-logo img {
+                max-width: 85%;
+            }
+
+            .volunteer-section {
+                padding: 60px 15px;
+            }
+
+            .volunteer-section h2 {
+                font-size: 1.6rem;
+                letter-spacing: 1.5px;
+                margin-bottom: 30px;
+            }
+
+            .volunteer-form-container {
+                padding: 35px 20px;
+                border-radius: 15px;
+            }
+
+            .volunteer-form {
+                gap: 15px;
+            }
+
+            .form-row {
+                gap: 15px;
+            }
+
+            .form-group label {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+            }
+
+            .form-group input {
+                padding: 11px 14px;
+                font-size: 0.9rem;
+            }
+
+            .sign-up-btn {
+                padding: 13px 40px;
+                font-size: 15px;
+                margin-top: 5px;
+            }
+
+            footer {
+                padding: 40px 20px;
+            }
+
+            .footer-content {
+                gap: 25px;
+            }
+
+            .footer-left h3 {
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+
+            .footer-right h3 {
+                font-size: 0.9rem;
+                margin-bottom: 12px;
+            }
+
+            .footer-right p {
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+        }
+
+        /* Very small mobile devices */
+        @media (max-width: 360px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero h2 {
+                font-size: 1rem;
+            }
+
+            .vision-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .slideshow-section {
+                height: 280px;
+            }
+
+            .about-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .accordion-title {
+                font-size: 0.95rem;
+            }
+
+            .vision-section h2,
+            .invest-content h2,
+            .volunteer-section h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">PATALANO • STATE SENATE</div>
+        <a href="https://secure.demsgive.org/donate/todd-patalano-senate-district-26/" target="_blank" class="donate-btn">Donate Today</a>
+    </header>
+
+    <section class="hero">
+        <h1>TODD PATALANO</h1>
+        <h2>STATE SENATE DISTRICT 26</h2>
+        <a href="https://secure.demsgive.org/donate/todd-patalano-senate-district-26/" target="_blank" class="support-btn">Support</a>
+    </section>
+
+    <div class="page-break">
+        <div class="page-break-line"></div>
+    </div>
+
+    <section class="about-section">
+        <div class="about-image"></div>
+        <div class="about-content">
+            <h3>Proud Cranston Resident</h3>
+            <p>Todd has been a lifelong resident and active member of Senate District 26, where he currently lives with his wife, Gina, and their three sons, Jacob, Justin, and Jared. His professional journey began at his family's business, Performance Enterprises, located on Cranston Street, where he developed a deep connection to the local community.</p>
+
+            <h3>Path to Leadership</h3>
+            <p>A dedicated member of the Cranston Police Department since 1993, Todd rose through the ranks to the position of Major. Throughout his career, he has worked tirelessly to enhance public safety and strengthen relationships within the community.</p>
+
+            <h3>Education</h3>
+            <p>Todd graduated from Cranston West High School and earned a Master of Science from Roger Williams University's School of Justice Studies. His education has equipped him with the expertise to tackle complex challenges and drive meaningful change in the community.</p>
+
+            <h3>Community Involvement</h3>
+            <p>Todd is an active volunteer, serving as a coach for CLCF basketball and a dedicated parishioner of Holy Apostles Church. His commitment to youth sports has earned him recognition as a Hall of Fame coach for Cranston Western Little League baseball.</p>
+        </div>
+    </section>
+
+    <div class="page-break">
+        <div class="page-break-line"></div>
+    </div>
+
+    <section class="vision-section">
+        <h2>My Vision, Your Future</h2>
+        <div class="vision-content">
+            <div class="vision-image-container">
+                <div class="vision-image"></div>
+                <a href="https://secure.demsgive.org/donate/todd-patalano-senate-district-26/" target="_blank" class="join-btn">Join Me</a>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Taxes</span>
+                        <span class="accordion-icon">−</span>
+                    </div>
+                    <div class="accordion-content active">
+                        <p>Hold the line on taxes while supporting policies to promote job creation & growth.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Education</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Advocate for our teachers and students to provide all children with a quality education.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Environment</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Promote legislative policy that protects and enhances Rhode Islands's natural resources.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Seniors & Veterans</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Provide vital funding for programs that support our seniors and veterans.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span class="accordion-title">Shared Municipal Services</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Promote government efficiency through the sharing of services among cities and towns, saving taxpayer dollars.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-break">
+        <div class="page-break-line"></div>
+    </div>
+
+    <section class="slideshow-section">
+        <div class="slide slide-1 active"></div>
+        <div class="slide slide-2"></div>
+        <div class="slide slide-3"></div>
+        <div class="slide slide-4"></div>
+        <div class="slide slide-5"></div>
+    </section>
+
+    <div class="page-break">
+        <div class="page-break-line"></div>
+    </div>
+
+    <section class="invest-section">
+        <div class="invest-content">
+            <h2>Invest in Cranston</h2>
+            <p>Help us turn our vision into action. Together, we can build a brighter future for our community.</p>
+            <a href="https://secure.demsgive.org/donate/todd-patalano-senate-district-26/" target="_blank" class="donate-btn">Donate Today</a>
+        </div>
+        <div class="invest-logo">
+            <img src="assets/images/logo.webp" alt="Todd Patalano State Senate">
+        </div>
+    </section>
+
+    <div class="page-break">
+        <div class="page-break-line"></div>
+    </div>
+
+    <section class="volunteer-section">
+        <h2>Sign Up To Volunteer</h2>
+        <div class="volunteer-form-container">
+            <form class="volunteer-form" action="https://your-form-endpoint.com" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email (required)</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="sign-up-btn">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Elect Todd Patalano<br>State Senate<br>District 26 • Cranston</h3>
+            </div>
+            <div class="footer-right">
+                <h3>Contact:</h3>
+                <p>(401) 355-1889</p>
+                <p><a href="mailto:teampatalano@gmail.com">teampatalano@gmail.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Image preloading to ensure images stay loaded
+        const imagesToPreload = [
+            'assets/images/state-house.jpg',
+            'assets/images/todd-family.webp',
+            'assets/images/todd.webp',
+            'assets/images/slide-1.jpeg',
+            'assets/images/slide-2.webp',
+            'assets/images/slide-3.jpeg',
+            'assets/images/slide-4.webp',
+            'assets/images/slide-5.webp',
+            'assets/images/logo.webp'
+        ];
+
+        // Preload all images
+        imagesToPreload.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Change slide every 4 seconds
+        setInterval(showNextSlide, 4000);
+
+        // Accordion functionality
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.accordion-icon');
+
+            // Close all accordions
+            allContents.forEach(item => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Reset all icons
+            allIcons.forEach(item => {
+                if (item !== icon) {
+                    item.textContent = '+';
+                }
+            });
+
+            // Toggle current accordion
+            content.classList.toggle('active');
+            icon.textContent = content.classList.contains('active') ? '−' : '+';
+        }
+    </script>
+</body>
+</html>
